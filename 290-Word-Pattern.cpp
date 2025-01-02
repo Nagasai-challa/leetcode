@@ -20,19 +20,16 @@ public:
         for(int i=0;i<v.size();i++)
         {
             if(m1.find(v[i])==m1.end()){
-                //cout<<v[i]<<" "<<"HELLO"<<endl;
                 if(m2[p[a]]!=0) return false;
                 m1[v[i]]=p[a];
                 m2[p[a]]++;
                 a++;
             }
             else{
-                //cout<<v[i]<<" "<<"HELLO2"<<endl;
                 if(m1[v[i]]!=p[a]) return false;
                 a++;
             }
         }
-        //cout<<a<<endl;
         return p.size()==a;
     }
 };
